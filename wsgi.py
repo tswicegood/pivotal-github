@@ -1,7 +1,6 @@
 from dolt.apis.github import GitHub
 import jinja2
 import json
-import yajl
 import os
 
 BASE_PATH = os.path.dirname(__file__)
