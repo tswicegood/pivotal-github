@@ -1,3 +1,4 @@
 gunicorn
 -e git://github.com/tswicegood/Dolt.git#egg=dolt
 httplib2
+jinja2

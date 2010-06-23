@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<external_stories type="array">
+    {% for issue in issues %}
+    <external_story>
+        <external_id>{{ issue.number }}</external_id>
+        <name>{{ issue.name }}</name>
+        <description>{{ issue.body }}</description>
+        <requested_by>{{ issue.user }}</requested_by>
+        <created_at type="datetime">{{ issue.created_at }}</created_at>
+        {% if "feature" in issue.labels %}<story_type>feature</story_type>{% else %}
+        {% if "bug" in issue.labels %}<story_type>bug</story_type>{% endif %}{% endif %}
+    </external_story>
+    {% endfor %}
+</external_stories>
+
