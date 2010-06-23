@@ -17,6 +17,6 @@ def grab_open_issues():
 def application(environ, start_response):
     template = templates.get_template("pivotal.xml")
     start_response(200, [('Content-Type', 'application/xml')])
-    return [template.render(**grab_open_issues())]
+    return [template.render({"issues": grab_open_issues()['issues']})]
 
 
