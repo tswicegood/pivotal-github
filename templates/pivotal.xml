@@ -7,8 +7,15 @@
         <description>{{ issue.body }}</description>
         <requested_by>{{ issue.user }}</requested_by>
         <created_at type="datetime">{{ issue.created_at }}</created_at>
-        {% if "feature" in issue.labels %}<story_type>feature</story_type>{% else %}
-        {% if "bug" in issue.labels %}<story_type>bug</story_type>{% endif %}{% endif %}
+        {% if "feature" in issues.labels %}
+            <story_type>feature</story_type>
+        {% else %}{% if "bug" in issue.labels %}
+            <story_type>bug</story_type>
+        {% else %}{% if "chore" in issue.labels %}
+            <story_type>chore</story_type>
+        {% else %}
+            <story_type>feature</story_type>
+        {% endif %}{% endif %}{% endif %}
     </external_story>
     {% endfor %}
 </external_stories>
