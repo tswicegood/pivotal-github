@@ -3,7 +3,7 @@
     {% for issue in issues %}
     <external_story>
         <external_id>{{ issue.number }}</external_id>
-        <name>{{ issue.name }}</name>
+        <name>{{ issue.title }}</name>
         <description>{{ issue.body }}</description>
         <requested_by>{{ issue.user }}</requested_by>
         <created_at type="datetime">{{ issue.created_at }}</created_at>
