@@ -1,4 +1,5 @@
 {
-    "github_user": "tswicegood",
-    "github_repo": "pivotal-github"
+    "github_user": "YOUR-GITHUB-USER",
+    "github_repo": "YOUR-REPO-NAME"
+    "github_apikey": "YOUR-API-KEY"
 }
